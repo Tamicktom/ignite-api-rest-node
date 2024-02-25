@@ -2,6 +2,7 @@ import fastify from "fastify";
 import crypto from "node:crypto";
 
 //* Local imports
+import { env } from "./env";
 import { knex } from "./database";
 
 const app = fastify({ logger: true });
@@ -18,6 +19,6 @@ app.get("/", async (request, reply) => {
   return { transaction };
 });
 
-app.listen({ port: 3000 }).then((address) => {
+app.listen({ port: env.PORT }).then((address) => {
   console.log(`Server listening on ${address}`);
 });
