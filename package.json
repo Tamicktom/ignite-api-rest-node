@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "knex": "node --import tsx ./node_modules/.bin/knex",
-    "dev": "tsx watch ./src/server.ts"
+    "dev": "tsx watch ./src/server.ts",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.20",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^1.5.0",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^6.3.4"
   },
   "dependencies": {
     "@fastify/cookie": "^9.3.1",
